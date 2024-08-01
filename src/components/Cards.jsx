@@ -20,6 +20,7 @@ const Cards = () => {
         
     }
   return (
+
     <div className='flex justify-center items-center'>
         <FaArrowCircleLeft className={`w-10 h-10 p-1 ${ window.innerWidth >= "425" ? "visible" : "hidden" }`} onClick={()=>{
             handleScroll(-width)
@@ -34,7 +35,6 @@ const Cards = () => {
         <FaArrowCircleRight className={`w-10 h-10 p-1 ${ window.innerWidth >= "425" ? "visible" : "hidden" }`} onClick={()=>{
             handleScroll(width)
         }}/>
-        {console.log(window.innerWidth)}
     </div>
   )
 }

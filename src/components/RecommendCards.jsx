@@ -11,7 +11,7 @@ const RecommendCards = () => {
 
     const handleScroll = (scrollAmount) =>{
         const newScrollPosition = scrollPosition + scrollAmount;
-        if(newScrollPosition >= cardContents.length*width || newScrollPosition <0){
+        if(newScrollPosition >= city.length*width || newScrollPosition <0){
             return;
         }
         setPosition(newScrollPosition);
@@ -20,7 +20,7 @@ const RecommendCards = () => {
     }
   return (
     <div className='flex justify-center items-center'>
-        <FaArrowCircleLeft className='w-10 h-10 p-1 hidden sm:visible' onClick={()=>{
+        <FaArrowCircleLeft className={`w-10 h-10 p-1 ${ window.innerWidth >= "425" ? "visible" : "hidden" }`} onClick={()=>{
             handleScroll(-width)
         }}/>
         <div ref={cardRef} className='hideScroll grid grid-flow-col scroll-auto snap-x overflow-x-scroll overflow-hidden'>
@@ -33,7 +33,7 @@ const RecommendCards = () => {
                 })
             }
         </div>
-        <FaArrowCircleRight className='w-10 h-10 p-1 hidden sm:visible' onClick={()=>{
+        <FaArrowCircleRight className={`w-10 h-10 p-1 ${ window.innerWidth >= "425" ? "visible" : "hidden" }`} onClick={()=>{
             handleScroll(width)
         }}/>
     </div>
