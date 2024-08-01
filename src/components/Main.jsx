@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-dom'
 const Main = () => {
   const navigate = useNavigate();
   return (
-    <div className='back h-[100vh] max-w-[425px] rounded-xl overflow-hidden'>
+    <div style={{
+      background: `url('./background.jpg') center center/cover`
+    }} className='back h-[100vh] max-w-[425px] rounded-xl overflow-hidden'>
       {/* <img src="./background.jpg" className='-z-20' alt="Hello" /> */}
       <div className='text-white w-full h-full flex justify-end flex-col'>
         <h1 className='font-[Calistoga] text-center text-5xl my-4'>Aspen</h1>

@@ -11,13 +11,13 @@
     font-family: "Roboto", sans-serif;
 }
 
-.back{
+/* .back{
     background: url('./background.jpg') center center/cover;
 }
 
 .card{
     background: url('./background.jpg') center center/cover;
-}
+} */
 
 .hideScroll::-webkit-scrollbar{
     display: none;
