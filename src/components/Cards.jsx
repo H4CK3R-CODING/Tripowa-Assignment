@@ -25,7 +25,7 @@ const Cards = () => {
         <FaArrowCircleLeft className={`w-10 h-10 p-1 ${ window.innerWidth >= "425" ? "visible" : "hidden" }`} onClick={()=>{
             handleScroll(-width)
         }}/>
-        <div ref={cardRef} className='hideScroll grid grid-flow-col scroll-auto snap-x overflow-x-scroll overflow-hidden'>
+        <div ref={cardRef} className='hideScroll grid grid-flow-col scroll-auto overflow-x-scroll overflow-hidden'>
             {
                 cardContents.map((element, idx)=>{
                     return <div key={idx}><Card content={element} /></div>
